@@ -1,0 +1,17 @@
+<div ng-controller="TabController">
+    <ul class="nav nav-tabs" ng-show="!isMobile">
+        <li role="presentation" ng-class="{active: tabs.activeIndex === $index}" ng-repeat="tab in tabs.tabs" ng-click="tabs.activeIndex=$index">
+            <a href="#">{{ tab.label }}</a>
+        </li>
+    </ul>
+    <ul class="tab-wrapper">
+        <li ng-repeat="tab in tabs.tabs" ng-class="{'panel panel-default': isMobile}" class="tab-container">
+            <div class="panel-heading mobile-tab-hading" ng-show="isMobile" ng-click="tabs.activeIndex=$index">
+                {{ tab.label }}
+            </div>
+            <div ng-show="tabs.activeIndex === $index" ng-class="{'panel-body mobile-content': isMobile, 'panel-body desktop-content': !isMobile}">
+                {{ tab.content }}
+            </div>
+        </li>
+    </ul>
+</div>

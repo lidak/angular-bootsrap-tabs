@@ -1,0 +1,51 @@
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+.tab-wrapper {
+    position: relative;
+}
+
+.tab-container {
+    list-style-type: none;
+}
+
+.tab-container {
+    position: absolute;
+    width: 100%;
+}
+
+.tab-container.panel.panel-default {
+    position: static;
+    margin-bottom: 3px;
+}
+
+.mobile-content, .desktop-content {
+    transition: all linear 0.3s;
+}
+
+.tab-container .mobile-content {
+    height: 50px;
+    overflow: hidden;
+}
+
+.tab-container .mobile-content.ng-hide {
+    height: 0;
+    padding: 0 15px;
+    line-height: 0;
+}
+
+.mobile-tab-hading {
+    cursor: pointer;
+}
+
+.desktop-content {
+    opacity: 1;
+    border: 1px solid #eee;
+    border-width: 0 1px 1px 1px;
+}
+
+.desktop-content.ng-hide {
+    opacity: 0;
+}
